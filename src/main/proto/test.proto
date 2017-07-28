@@ -1,0 +1,14 @@
+syntax = "proto3";
+package example;
+option java_package = "edu.nudt.das.image.grpc";
+option java_outer_classname = "ImageServiceProto";
+option java_multiple_files = true;
+
+service FormatData {
+    rpc DoFormat (Data) returns (Data) {
+    }
+}
+
+message Data {
+    string text = 1;
+}
